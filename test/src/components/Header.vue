@@ -1,5 +1,5 @@
 <template>
-    <p>testing {{ data }}</p>
+  <p>HEADER</p>>
 </template>
 
 <script>
@@ -8,8 +8,12 @@ export default {
   props: {
     data: String
   },
-  setup(){
+  setup() {
 
   }
 }
 </script>
+
+<style scoped></style>
+
+
