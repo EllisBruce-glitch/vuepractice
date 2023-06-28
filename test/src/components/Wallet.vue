@@ -5,16 +5,16 @@
     <div class="wallet-shop">
       <img src="@/assets/images/svgs/shopwallet.svg" alt="">
       <div class="text-container">
-        <span class="main-text">{{ shopeeMoney }}</span>
-        <span class="sub-text">{{ moneySub }}</span>
+        <span class="main-text">{{ sign }} {{ wallet.shopeeMoney }}</span>
+        <span class="sub-text">Shopee Pay Balance</span>
       </div>
     </div>
     <img src="@/assets/images/shapes/Rectangle117.svg" alt="">
     <div class="coin-shop">
       <img src="@/assets/images/svgs/coin.svg" alt="">
       <div class="text-container">
-        <span class="main-text">{{ shopeeCoins }}</span>
-        <span class="sub-text">{{ coinSub }}</span>
+        <span class="main-text">{{ wallet.shopeeCoins }}</span>
+        <span class="sub-text">Shopee Coins</span>
       </div>
     </div>
   </div>
@@ -22,23 +22,18 @@
 
 <script setup>
 
+import { ref } from 'vue'
+
 defineProps({
-  shopeeMoney: {
+  sign: {
     type: String,
-    default: 'Rp4.982.123'
-  },
-  moneySub: {
-    type: String,
-    default: 'Isi Saldo ShopeePay'
-  },
-  shopeeCoins: {
-    type: String,
-    default: '928.300 Koin'
-  },
-  coinSub: {
-    type: String,
-    default: 'Klaim koin di sini'
+    default: 'Php'
   }
+})
+
+const wallet = ref({
+  shopeeMoney: "1,023,000",
+  shopeeCoins: "900,000",
 })
 
 </script>
