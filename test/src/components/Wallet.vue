@@ -5,31 +5,42 @@
     <div class="wallet-shop">
       <img src="@/assets/images/svgs/shopwallet.svg" alt="">
       <div class="text-container">
-        <span class="main-text">Rp4.982.000 </span>
-        <span class="sub-text">Isi Saldo ShopeePay</span>
+        <span class="main-text">{{ shopeeMoney }}</span>
+        <span class="sub-text">{{ moneySub }}</span>
       </div>
     </div>
     <img src="@/assets/images/shapes/Rectangle117.svg" alt="">
     <div class="coin-shop">
       <img src="@/assets/images/svgs/coin.svg" alt="">
       <div class="text-container">
-        <span class="main-text">928.300 Koin</span>
-        <span class="sub-text">Klaim koin di sini</span>
+        <span class="main-text">{{ shopeeCoins }}</span>
+        <span class="sub-text">{{ coinSub }}</span>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'WalletComponent',
-  props: {
-    data: String
-  },
-  setup() {
+<script setup>
 
+defineProps({
+  shopeeMoney: {
+    type: String,
+    default: 'Rp4.982.123'
+  },
+  moneySub: {
+    type: String,
+    default: 'Isi Saldo ShopeePay'
+  },
+  shopeeCoins: {
+    type: String,
+    default: '928.300 Koin'
+  },
+  coinSub: {
+    type: String,
+    default: 'Klaim koin di sini'
   }
-}
+})
+
 </script>
 
 <style scoped>

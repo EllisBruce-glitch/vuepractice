@@ -3,47 +3,55 @@
   <div class="flashsale-container">
     <div class="flashtimer-container">
       <div class="flashname">
-        <span id="flashname">FLASHSALE</span>
+        <span id="flashname">{{ title }}</span>
       </div>
 
       <div class="timer-container">
         <div class="timer-unit">
-          <span id="unit">0</span>
+          <span id="unit">{{ timer.hour }}</span>
         </div>
         <div class="timer-unit">
-          <span id="unit">1</span>
+          <span id="unit">{{ timer.hour2 }}</span>
         </div>
         <div class="timer-sign">
           <span id="sign">:</span>
         </div>
         <div class="timer-unit">
-          <span id="unit">2</span>
+          <span id="unit">{{ timer.minute }}</span>
         </div>
         <div class="timer-unit">
-          <span id="unit">3</span>
+          <span id="unit">{{ timer.minute2 }}</span>
         </div>
       </div>
     </div>
     <!--VIEW BTN-->
     <div class="view-container">
       <div class="viewname">
-        <p id="viewname">View all</p>
+        <span id="viewname">View all</span>
       </div>
     </div>
 
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ShopFlashSaleComponent',
-  props: {
-    data: String
-  },
-  setup() {
+<script setup>
 
+import { ref } from 'vue'
+
+defineProps({
+  title: {
+    type: String,
+    default: 'FLASHSALE'
   }
-}
+})
+
+const timer = ref({
+  hour: 0,
+  hour2: 2,
+  minute: 3,
+  minute2: 4
+})
+
 </script>
 
 <style scoped>

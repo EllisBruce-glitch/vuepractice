@@ -1,28 +1,25 @@
 <template>
   <div class="shop-container">
     <div class="flashbanner-container">
-      <span>12.12 Super BrandDay</span>
+      <span>{{ saleBanner.title }}</span>
     </div>
     <div class="main-container">
-      <ShopFlashSale />
-      <ShopItems />
+      <ShopFlashSale title="FLASHSALE" />
+      <ShopItems sign="PHP" />
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 
 import ShopFlashSale from '@/components/ShopFlashSale.vue'
 import ShopItems from '@/components/ShopItems.vue'
+import { ref } from 'vue'
 
+const saleBanner = ref({
+  title: "12.12 Super Branday"
+})
 
-export default {
-  name: 'ShopComponent',
-  components: {
-    ShopFlashSale,
-    ShopItems,
-  }
-}
 </script>
 
 <style scoped>

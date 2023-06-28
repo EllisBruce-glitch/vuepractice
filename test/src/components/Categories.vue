@@ -31,16 +31,16 @@
 
       <div class="category-item-name">
         <div class="itemname-container">
-          <span class="itemname">Shopee Food</span>
+          <span class="itemname">{{ categories.food }}</span>
         </div>
         <div class="itemname-container">
-          <span class="itemname">Shopee Mall</span>
+          <span class="itemname">{{ categories.mall }}</span>
         </div>
         <div class="itemname-container">
-          <span class="itemname">Shopee Supermarket</span>
+          <span class="itemname">{{ categories.supermarket }}</span>
         </div>
         <div class="itemname-container">
-          <span class="itemname">Seabank</span>
+          <span class="itemname">{{ categories.seabank }}</span>
         </div>
       </div>
 
@@ -53,22 +53,25 @@
           <img src="@/assets/images/svgs/dot2.svg" alt="" />
           <img src="@/assets/images/svgs/dot2.svg" alt="" />
           <img src="@/assets/images/svgs/dot2.svg" alt="" />
+          <!-- <img src={{ categories.picture }} alt="" /> -->
+
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'CategoriesComponent',
-  props: {
-    data: String
-  },
-  setup() {
+<script setup>
 
-  }
-}
+import { ref } from 'vue'
+
+const categories = ref({
+  food: "Shopee Food",
+  mall: "Shopee Mall",
+  supermarket: "Shopee Supermarket",
+  seabank: "Seabank"
+  // picture: "@/assets/images/svgs/dot2.svg"
+})
 </script>
 
 <style scoped>
@@ -149,8 +152,7 @@ export default {
   font-weight: 600;
   line-height: 10.97px;
   text-align: center;
-  display: flex;
-  align-items: flex-start;
+
 }
 
 /* CATEGORY SECTION - SLIDER */

@@ -2,35 +2,34 @@
   <div class="shopitems-container">
     <div class="item-container">
       <div class="img-container"><img src="@/assets/images/pictures/shoes.jpg" alt=""></div>
-      <div class="text-container"><span>Nike React Miler </span></div>
+      <div class="text-container"><span>Nike React Miler</span></div>
 
       <ShopPromos />
 
       <div class="price-container">
-        <div class="priceRP">
-          <span id="signRP">Rp</span>
-          <span id="priceRP">1,299,999</span>
+        <div class="price">
+          <span id="sign">{{ sign }}</span>
+          <span id="price">1,299,999</span>
         </div>
-        <div class="terjualRP">
-          <span id="terjualRP">1,7RB Terjual</span>
+        <div class="sold">
+          <span id="sold">{{ sold }}</span>
         </div>
       </div>
 
     </div>
     <div class="item-container">
       <div class="img-container"><img src="@/assets/images/pictures/jacket.jpg" alt=""></div>
-      <div class="text-container"><span>Erigo Coach Jacket
-          Apparel Tokyo Nevy </span></div>
+      <div class="text-container"><span>Erigo Coach Jacket Apparel Tokyo Nevy </span></div>
 
       <ShopPromos />
 
       <div class="price-container">
-        <div class="priceRP">
-          <span id="signRP">Rp.</span>
-          <span id="priceRP">199.000</span>
+        <div class="price">
+          <span id="sign">{{ sign }}</span>
+          <span id="price">199.000</span>
         </div>
-        <div class="terjualRP">
-          <span id="terjualRP">102RB Terjual</span>
+        <div class="sold">
+          <span id="sold">{{ sold }}</span>
         </div>
       </div>
 
@@ -38,16 +37,22 @@
   </div>
 </template>
 
-<script>
+<script setup>
 
 import ShopPromos from '@/components/ShopPromos.vue'
 
-export default {
-  name: 'ShopPromosComponent',
-  components: {
-    ShopPromos
+defineProps({
+  sign: {
+    type: String,
+    default: 'Php'
+  },
+  sold: {
+    type: String,
+    default: '10,000' + ' Sold'
   }
-}
+})
+
+
 </script>
 
 <style scoped>
@@ -110,14 +115,14 @@ export default {
   justify-content: space-between;
 }
 
-.priceRP {
+.price {
   display: flex;
   flex-direction: row;
   height: 15px;
   width: 65px;
 }
 
-#signRP {
+#sign {
   align-self: flex-end;
   font-size: 5px;
   color: #ff5f00;
@@ -126,7 +131,7 @@ export default {
   line-height: 6.1px;
 }
 
-#priceRP {
+#price {
   align-self: flex-end;
   color: #ff5f00;
   font-size: 12px;
@@ -136,20 +141,21 @@ export default {
 
 }
 
-.terjualRP {
+.sold {
   display: flex;
   align-self: flex-end;
+  justify-content: right;
   height: 9px;
   width: 50px;
 }
 
-#terjualRP {
+#sold {
   font-family: Montserrat;
   font-size: 7px;
   font-weight: 400;
   line-height: 9px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: right;
 
 }
 </style>

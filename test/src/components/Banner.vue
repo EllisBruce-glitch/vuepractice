@@ -11,16 +11,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'BannerComponent',
-  props: {
-    data: String
-  },
-  setup() {
+<script setup>
 
-  }
-}
 </script>
 
 <style scoped>

@@ -4,8 +4,9 @@
       <span>12.12</span>
     </div>
     <div class="promo-container-individual2">
-      <img src="@/assets/images/svgs/deliverytruck.svg" alt="">
-      <span>GRATIS ONGKIR</span>
+      <!-- <img src="@/assets/images/svgs/deliverytruck.svg" alt=""> -->
+      <img loading="lazy" class="truck-icon" :src="require('@/assets/images/svgs/deliverytruck.svg')" />
+      <span>FREE SHIPPING</span>
     </div>
     <div class="promo-container-individual3">
       <div>
@@ -16,16 +17,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ShopPromosComponent',
-  props: {
-    data: String
-  },
-  setup() {
+<script setup>
 
-  }
-}
 </script>
 
 <style scoped>
@@ -70,7 +63,7 @@ export default {
   width: 35px;
 }
 
-.promo-container-individual2>img {
+.promo-container-individual2>.truck-icon {
   width: 9px;
   height: 9px;
   margin-right: 1px;
@@ -86,6 +79,7 @@ export default {
   line-height: 5px;
   margin-top: 1px;
   color: #fff;
+  margin-right: 1px;
 }
 
 .promo-container-individual3 {
