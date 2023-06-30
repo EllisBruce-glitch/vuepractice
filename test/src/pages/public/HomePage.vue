@@ -15,6 +15,8 @@ import BottomNavigation from '@/components/navigations/BottomNavigation.vue'
     <SearchSection />
     <BannerSection />
   </MobileContainer>
+
+
   <WalletSection />
   <CategoriesSection />
   <ShopSection />

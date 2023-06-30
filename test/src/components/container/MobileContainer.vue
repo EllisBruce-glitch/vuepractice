@@ -1,13 +1,14 @@
 <template>
     <div class="mobile-container">
         <div class="top-container">
+            <slot></slot>
         </div>
     </div>
 </template>
 
 <script></script>
 
-<style>
+<style scoped>
 .mobile-container {
     max-width: 1140px;
 }
