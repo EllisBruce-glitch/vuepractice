@@ -4,16 +4,16 @@
       <span>{{ saleBanner.title }}</span>
     </div>
     <div class="main-container">
-      <ShopFlashSale title="FLASHSALE" />
-      <ShopItems sign="PHP" />
+      <ShopFlashSaleContent title="FLASHSALE" />
+      <ShopItemsContent sign="PHP" />
     </div>
   </div>
 </template>
 
 <script setup>
 
-import ShopFlashSale from '@/components/ShopFlashSale.vue'
-import ShopItems from '@/components/ShopItems.vue'
+import ShopFlashSaleContent from '@/components/content/ShopFlashSaleContent.vue'
+import ShopItemsContent from '@/components/content/ShopItemsContent.vue'
 import { ref } from 'vue'
 
 const saleBanner = ref({

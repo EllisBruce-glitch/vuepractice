@@ -4,7 +4,7 @@
       <div class="img-container"><img src="@/assets/images/pictures/shoes.jpg" alt=""></div>
       <div class="text-container"><span>Nike React Miler</span></div>
 
-      <ShopPromos />
+      <ShopPromosContent />
 
       <div class="price-container">
         <div class="price">
@@ -21,7 +21,7 @@
       <div class="img-container"><img src="@/assets/images/pictures/jacket.jpg" alt=""></div>
       <div class="text-container"><span>Erigo Coach Jacket Apparel Tokyo Nevy </span></div>
 
-      <ShopPromos />
+      <ShopPromosContent />
 
       <div class="price-container">
         <div class="price">
@@ -39,7 +39,7 @@
 
 <script setup>
 
-import ShopPromos from '@/components/ShopPromos.vue'
+import ShopPromosContent from '@/components/content/ShopPromosContent.vue'
 
 defineProps({
   sign: {

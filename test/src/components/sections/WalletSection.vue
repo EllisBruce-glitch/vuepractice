@@ -1,20 +1,22 @@
 <template>
-  <div class="wallet-container">
-    <img id="qrscan" src="@/assets/images/svgs/qrscan.svg" alt="">
-    <img src="@/assets/images/shapes/Rectangle117.svg" alt="">
-    <div class="wallet-shop">
-      <img src="@/assets/images/svgs/shopwallet.svg" alt="">
-      <div class="text-container">
-        <span class="main-text">{{ sign }} {{ wallet.shopeeMoney }}</span>
-        <span class="sub-text">Shopee Pay Balance</span>
+  <div class="wall-cont">
+    <div class="wallet-container">
+      <img id="qrscan" src="@/assets/images/svgs/qrscan.svg" alt="">
+      <img src="@/assets/images/shapes/Rectangle117.svg" alt="">
+      <div class="wallet-shop">
+        <img src="@/assets/images/svgs/shopwallet.svg" alt="">
+        <div class="text-container">
+          <span class="main-text">{{ sign }} {{ wallet.shopeeMoney }}</span>
+          <span class="sub-text">Shopee Pay Balance</span>
+        </div>
       </div>
-    </div>
-    <img src="@/assets/images/shapes/Rectangle117.svg" alt="">
-    <div class="coin-shop">
-      <img src="@/assets/images/svgs/coin.svg" alt="">
-      <div class="text-container">
-        <span class="main-text">{{ wallet.shopeeCoins }}</span>
-        <span class="sub-text">Shopee Coins</span>
+      <img src="@/assets/images/shapes/Rectangle117.svg" alt="">
+      <div class="coin-shop">
+        <img src="@/assets/images/svgs/coin.svg" alt="">
+        <div class="text-container">
+          <span class="main-text">{{ wallet.shopeeCoins }}</span>
+          <span class="sub-text">Shopee Coins</span>
+        </div>
       </div>
     </div>
   </div>
@@ -39,6 +41,12 @@ const wallet = ref({
 </script>
 
 <style scoped>
+.wall-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wallet-container {
   width: 357px;
   height: 67px;
