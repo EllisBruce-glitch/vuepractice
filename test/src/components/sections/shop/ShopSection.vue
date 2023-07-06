@@ -17,7 +17,7 @@ import ShopItemsContent from '@/components/content/ShopItemsContent.vue'
 import { ref } from 'vue'
 
 const saleBanner = ref({
-  title: "12.12 Super Branday"
+  title: "12.12 Super Brand day"
 })
 
 </script>
@@ -26,7 +26,7 @@ const saleBanner = ref({
 .shop-container {
   margin-top: 9px;
   width: 100%;
-  height: 355px;
+  height: 364px;
   display: flex;
   align-items: flex-end;
 }
@@ -36,7 +36,7 @@ const saleBanner = ref({
   width: 167px;
   height: 23px;
   position: absolute;
-  margin-top: 13px;
+  margin-top: 20px;
   left: 24px;
   display: flex;
   justify-content: center;

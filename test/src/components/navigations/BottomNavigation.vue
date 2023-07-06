@@ -33,9 +33,8 @@ export default {
   
 <style scoped>
 .nav-bottom-tools {
-    width: 375x;
+    width: 100%;
     min-height: 60px;
-    bottom: 0px;
 }
 
 .nav-bottom-container>.tools {
@@ -55,6 +54,8 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .tools-item {

@@ -2,7 +2,7 @@
   <div class="category">
     <div class="category-container">
 
-      <!--CATEGORY PCITURES-->
+      <!-- CATEGORY PCITURES -->
 
       <div class="category-list">
         <div class="item-container">
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <!--CATEGORY SLIDER-->
+      <!-- CATEGORY SLIDER -->
 
       <div class="category-slider">
         <div class="category-slider-container">
@@ -53,7 +53,7 @@
           <img src="@/assets/images/svgs/dot2.svg" alt="" />
           <img src="@/assets/images/svgs/dot2.svg" alt="" />
           <img src="@/assets/images/svgs/dot2.svg" alt="" />
-          <!-- <img src={{ categories.picture }} alt="" /> -->
+
 
         </div>
       </div>
@@ -62,7 +62,6 @@
 </template>
 
 <script setup>
-
 import { ref } from 'vue'
 
 const categories = ref({
@@ -72,6 +71,8 @@ const categories = ref({
   seabank: "Seabank"
   // picture: "@/assets/images/svgs/dot2.svg"
 })
+
+
 </script>
 
 <style scoped>
