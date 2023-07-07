@@ -4,7 +4,9 @@
 
   </div> -->
 
-  <router-view />
+  <!-- <router-view /> -->
+
+  <SignInPage />
 </template>
 
 <script setup>
@@ -15,6 +17,7 @@
 
 // import HomePage from './pages/public/HomePage.vue'
 // import SplashScreenPage from './pages/public/SplashScreenPage.vue'
+import SignInPage from './pages/public/SignInPage.vue'
 
 </script>
 

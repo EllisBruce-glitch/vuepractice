@@ -47,7 +47,7 @@ defineProps({
             </div>
         </div>
         <div class="button">
-            <ButtonOrange link="/home" text="Update" />
+            <ButtonOrange link="/pwresetsuccess" text="Update" />
         </div>
 
     </div>

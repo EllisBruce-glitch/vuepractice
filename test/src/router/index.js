@@ -7,6 +7,8 @@ import SignInPage from '../pages/public/SignInPage'
 import ForgotPassword from '../pages/public/ForgotPasswordPage'
 import Recovery from '../pages/public/RecoveryPage'
 import NewPassword from '../pages/public/NewPasswordPage'
+import PwResetSuccess from '../pages/public/PwResetSuccessPage'
+import WelcomeBack from '../pages/public/WelcomeBackPage'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -45,6 +47,18 @@ const router = createRouter({
             path: '/newpassword',
             name: 'newpassword',
             component: NewPassword
+        },
+
+        {
+            path: '/pwresetsuccess',
+            name: 'pwresetsuccess',
+            component: PwResetSuccess
+        },
+
+        {
+            path: '/welcomeback',
+            name: 'welcomeback',
+            component: WelcomeBack
         },
 
         {
